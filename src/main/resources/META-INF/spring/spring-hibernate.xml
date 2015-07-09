@@ -26,7 +26,7 @@ class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
 		<value>com.reglamb.projvehimerc.domain.security.Users</value>
 		<value>com.reglamb.projvehimerc.domain.security.Authorities</value>
 		<!-- User -->
-		<value>com.reglamb.projvehimerc.domain.User</value>
+<!-- 		<value>com.reglamb.projvehimerc.domain.User</value> -->
 		<!-- Procedimientos -->
 		<value>com.reglamb.projvehimerc.domain.HabilitacionVehicular_Inscripcion</value>
 		<value>com.reglamb.projvehimerc.domain.HabilitacionVehicular_IncremtSusti</value>
@@ -94,95 +94,99 @@ class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
 </bean>
 -->
 <!-- Hibernate Template -->
- <bean id="hibernateTemplate" 
- 	class="org.springframework.orm.hibernate3.HibernateTemplate" 
- 	p:sessionFactory-ref ="sessionFactory"/>
+<!--  <bean id="hibernateTemplate"  -->
+<!--  	class="org.springframework.orm.hibernate3.HibernateTemplate"  -->
+<!--  	p:sessionFactory-ref ="sessionFactory"/> -->
  
 <!-- Injectores Procedimiento -->
-<bean id="userDao" 
-	class="com.reglamb.projvehimerc.dao.hibernate.UserDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- <bean id="userDao"  -->
+<!-- 	class="com.reglamb.projvehimerc.dao.hibernate.UserDaoHibernate" >  -->
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
+<!-- </bean> -->
+<bean id="usersDao" 
+	class="com.reglamb.projvehimerc.dao.hibernate.UsersDaoHibernate" > 
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="inscriptransportistaDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.HabilitacionVehicular_InscripcionDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="incrementsustitransportistaDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.HabilitacionVehicular_IncremtSustiDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 
 <!-- Main Injectores --> 
  <bean id="transportistaDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.TransportistaDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="transportistaNatuDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.TransportistaNatuDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="transportistaJuriDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.TransportistaJuridDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="conductorDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.ConductorDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 
 <!-- Injectores de Vehiculo, HibernateTemplate -->
 <bean id="vehiculoDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.VehiculoDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="vehiculocitvDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.vehiculo.Vehiculo_CitvDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="vehiculosoatDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.vehiculo.Vehiculo_SoatDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="vehiculoteneciaDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.vehiculo.Vehiculo_TenenciaDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 
 <!-- Injectores de Representante, HibernateTemplate -->
 <bean id="transrepresentanteDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.transportista.Transportista_RepresentanteDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="transsucursalDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.transportista.Transportista_SucursalDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="transaccionistaDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.transportista.Transportista_AccionistaDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 
 <!-- Injectores Ubigeo -->
 <bean id="ubigeoTransDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.UbigeoDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="ubigeoIneiTransDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.UbigeoIneiDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="departamentoDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.ubigeo.DepartamentoDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 <bean id="distritoDao" 
 	class="com.reglamb.projvehimerc.dao.hibernate.ubigeo.DistritoDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
  
 <bean id="provinciaDao"
 	class="com.reglamb.projvehimerc.dao.hibernate.ubigeo.ProvinciaDaoHibernate" > 
-	<property name="hibernateTemplate" ref ="hibernateTemplate" />
+<!-- 	<property name="hibernateTemplate" ref ="hibernateTemplate" /> -->
 </bean>
 
 <bean name="inscripcionHabilitacionVehicFacade" class="com.reglamb.projvehimerc.service.HabilitacionVehicular_InscripcionFacadeImpl" />

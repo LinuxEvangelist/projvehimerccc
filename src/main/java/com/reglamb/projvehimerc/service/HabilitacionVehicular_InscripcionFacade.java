@@ -11,7 +11,6 @@ import com.reglamb.projvehimerc.domain.TransportistaJuridico;
 import com.reglamb.projvehimerc.domain.TransportistaNatural;
 import com.reglamb.projvehimerc.domain.Ubigeo_Transportista;
 import com.reglamb.projvehimerc.domain.Ubigeo_Inei;
-import com.reglamb.projvehimerc.domain.User;
 import com.reglamb.projvehimerc.domain.Vehiculo;
 import com.reglamb.projvehimerc.domain.security.Authorities;
 import com.reglamb.projvehimerc.domain.security.Users;
@@ -94,7 +93,8 @@ public interface HabilitacionVehicular_InscripcionFacade {
 	/*Conductor*/
 	public void saveConductor(Conductor conductor) throws DataAccessException;
 
-	public List<Conductor> getAllConductor(Conductor conductor) throws DataAccessException;
+//	public List<Conductor> getAllConductor(Conductor conductor) throws DataAccessException;
+	public Conductor getConductorByName(String nomConductor)throws DataAccessException;
 	
 	/*Ubigeo*/
 	public void saveUbigeo(Ubigeo_Transportista ubigeo) throws DataAccessException;
@@ -118,9 +118,9 @@ public interface HabilitacionVehicular_InscripcionFacade {
 	public List<Provincia> getAllProvincia(Provincia provincia) throws DataAccessException;
 	
 	/*User*/
-	public User authenticateUser(String name_user,String pass_user)throws DataAccessException, AuthenticationException;
-	
-	public User getUserByname(String username) throws DataAccessException, EntityNotFoundException;
+//	public User authenticateUser(String name_user,String pass_user)throws DataAccessException, AuthenticationException;
+//	
+//	public User getUserByname(String username) throws DataAccessException, EntityNotFoundException;
 	
 	/*Users*/
     public Users getUser(String login) throws DataAccessException, EntityNotFoundException;

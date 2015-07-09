@@ -39,8 +39,10 @@
 	<!-- Facelets, tell JSF to use Facelets <context-param> <param-name>org.ajax4jsf.VIEW_HANDLERS</param-name> 
 		<param-value>com.sun.facelets.FaceletViewHandler</param-value> </context-param> -->
 
-	<!-- Spring JavaServiceFaces framework ApacheMyfaces <listener> <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class> 
-		</listener> -->
+	<!-- Spring JavaServiceFaces framework ApacheMyfaces 
+	<listener> 
+	<listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class> 
+	</listener> -->
 
 	<!-- Spring Security, for all -->
 	<filter>
@@ -73,13 +75,14 @@
 		<param-name>org.richfaces.skin</param-name>
 		<param-value>blueSky</param-value>
 	</context-param>
-
+	
 	<!-- JSF 2 -->
 	<!-- Use JSF view templates saved as *.xhtml, for use with Facelets -->
-	<context-param>
-		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
-		<param-value>.xhtml</param-value>
-	</context-param>
+<!-- 	<context-param> -->
+<!-- 		<param-name>javax.faces.DEFAULT_SUFFIX</param-name> -->
+<!-- 		<param-value>.jsp .xhtml</param-value> -->
+<!-- 	</context-param> -->
+	
 	<!-- Enables special Facelets debug output during development -->
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
@@ -108,7 +111,8 @@
 	<!-- Just here so the JSF implementation can initialize -->
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
-		<url-pattern>*.faces</url-pattern>
+		<!-- <url-pattern>*.faces</url-pattern> -->
+		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
 
 	<!-- Servlet register for SpringFaces, SpringJavaScript JSF 1.2 Spring Faces -->
@@ -130,13 +134,14 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>transportes</servlet-name>
+		<!-- <url-pattern>/spring/*</url-pattern> -->
 		<url-pattern>/spring/*</url-pattern>
 	</servlet-mapping>
 
 	<!-- Page That control SpringWeb <error-page> <error-code>404</error-code> 
 		<location>/WEB-INF/jsp/error.jsp</location> </error-page> -->
-	<welcome-file-list>
+	<!-- <welcome-file-list>
 		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
+	</welcome-file-list> -->
 
 </web-app>

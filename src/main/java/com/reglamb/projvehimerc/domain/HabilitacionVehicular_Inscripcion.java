@@ -23,7 +23,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Type;
 
-import com.reglamb.projvehimerc.domain.User;
+import com.reglamb.projvehimerc.domain.security.Users;
 
 /**
  * @author   mastervodoo
@@ -82,7 +82,7 @@ public class HabilitacionVehicular_Inscripcion implements Serializable,DomainObj
 	 * @uml.property  name="user"
 	 * @uml.associationEnd  
 	 */
-	private User user;
+	private Users users;
 	/**
 	 * @uml.property  name="activo"
 	 */
@@ -295,19 +295,19 @@ public class HabilitacionVehicular_Inscripcion implements Serializable,DomainObj
 	 * @return
 	 * @uml.property  name="user"
 	 */
-	@ManyToOne
-	@Cascade (value=CascadeType.SAVE_UPDATE)
-	@JoinColumn (name="id_user")
-	public User getUser() {
-		return user;
-	}
-	/**
-	 * @param user
-	 * @uml.property  name="user"
-	 */
-	public void setUser(User user) {
-		this.user = user;
-	}
+//	@ManyToOne
+//	@Cascade (value=CascadeType.SAVE_UPDATE)
+//	@JoinColumn (name="id")
+//	public Users getUser() {
+//		return users;
+//	}
+//	/**
+//	 * @param user
+//	 * @uml.property  name="user"
+//	 */
+//	public void setUser(Users users) {
+//		this.users = users;
+//	}
 	/**
 	 * @return
 	 * @uml.property  name="activo"

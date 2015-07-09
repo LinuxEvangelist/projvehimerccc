@@ -1,26 +1,29 @@
 package com.reglamb.projvehimerc.controller;
-
+//
+//import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.context.SecurityContextHolder;
 //import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.userdetails.UserDetailsService;
 //import org.springframework.stereotype.Controller;
-//import org.springframework.ui.ModelMap;
 //import org.springframework.web.bind.annotation.RequestMapping;
 //import org.springframework.web.bind.annotation.RequestMethod;
+//import org.springframework.web.servlet.ModelAndView;
 // 
 //@Controller
-//public class MainController {
-// 
-//@RequestMapping(value="/spring/main", method = RequestMethod.GET)
-//	public void printWelcome(ModelMap model) {
-// 
-////		User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-////		String name = user.getUsername();
-//		UserDetails userDetails =
-//				 (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//		String name = userDetails.getUsername();
+//@RequestMapping("/spring")
+//public final class MainController {
+//	@Autowired
+//	protected UserDetailsService userService;
 //	
-//		model.addAttribute("username", name);
-//		model.addAttribute("message", "Spring Security login + database example");
+//@RequestMapping(value = "/welcome",method = RequestMethod.GET)
+//	public ModelAndView printUserLogin(ModelAndView mav) {
+// 
+//	UserDetails user =
+//				 (UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//	
+//	mav.addObject("user", user);
+//    
+//	return mav;
 //		 
 //	}
 //}

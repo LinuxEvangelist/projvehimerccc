@@ -19,7 +19,7 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.Type;
 
-import com.reglamb.projvehimerc.domain.User;
+import com.reglamb.projvehimerc.domain.security.Users;
 
 
 @Entity
@@ -84,7 +84,7 @@ public class HabilitacionVehicular_IncremtSusti implements Serializable,DomainOb
 	 * @uml.property  name="user"
 	 * @uml.associationEnd  
 	 */
-	private User user;
+	private Users users;
 	/**
 	 * @return
 	 * @uml.property  name="idincrementosustitucion"
@@ -279,17 +279,17 @@ public class HabilitacionVehicular_IncremtSusti implements Serializable,DomainOb
 	 * @return
 	 * @uml.property  name="user"
 	 */
-	@ManyToOne
-	@Cascade (value=CascadeType.SAVE_UPDATE)
-	@JoinColumn (name="id_user")
-	public User getUser() {
-		return user;
-	}
-	/**
-	 * @param user
-	 * @uml.property  name="user"
-	 */
-	public void setUser(User user) {
-		this.user = user;
-	}
+//	@ManyToOne
+//	@Cascade (value=CascadeType.SAVE_UPDATE)
+//	@JoinColumn (name="id")
+//	public Users getUsers() {
+//		return users;
+//	}
+//	/**
+//	 * @param user
+//	 * @uml.property  name="user"
+//	 */
+//	public void setUsers(Users user) {
+//		this.users = user;
+//	}
 }

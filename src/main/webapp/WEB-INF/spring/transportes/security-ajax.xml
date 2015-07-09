@@ -3,7 +3,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="entryPoint"
+   <!--  <bean id="entryPoint"
             class="org.springframework.security.web.authentication.DelegatingAuthenticationEntryPoint">
         <constructor-arg>
             <map>
@@ -22,5 +22,5 @@
                         <property name="loginFormUrl" value="/spring/index.xhtml"/>
                 </bean>
         </property>
-    </bean>
+    </bean> -->
 </beans>

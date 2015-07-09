@@ -8,7 +8,7 @@
     <import resource="classpath:META-INF/spring/spring-master.xml" />
     <import resource="/transportes/transportes-servlet.xml"/>
     <import resource="/transportes/transportes-webflow.xml"/>
-    <import resource="/transportes/security-ajax.xml"/>
+    <!-- <import resource="/transportes/security-ajax.xml"/> -->
     <import resource="spring-security.xml"/> 
            
 </beans>

@@ -21,7 +21,7 @@ import com.reglamb.projvehimerc.dao.Transportista_RepresentanteDao;
 import com.reglamb.projvehimerc.dao.Transportista_SucursalDao;
 import com.reglamb.projvehimerc.dao.UbigeoDao;
 import com.reglamb.projvehimerc.dao.UbigeoIneiDao;
-import com.reglamb.projvehimerc.dao.UserDao;
+//import com.reglamb.projvehimerc.dao.UserDao;
 import com.reglamb.projvehimerc.dao.UsersDao;
 import com.reglamb.projvehimerc.dao.VehiculoDao;
 import com.reglamb.projvehimerc.dao.Vehiculo_CitvDao;
@@ -34,7 +34,7 @@ import com.reglamb.projvehimerc.domain.TransportistaJuridico;
 import com.reglamb.projvehimerc.domain.TransportistaNatural;
 import com.reglamb.projvehimerc.domain.Ubigeo_Inei;
 import com.reglamb.projvehimerc.domain.Ubigeo_Transportista;
-import com.reglamb.projvehimerc.domain.User;
+//import com.reglamb.projvehimerc.domain.User;
 import com.reglamb.projvehimerc.domain.Vehiculo;
 import com.reglamb.projvehimerc.domain.security.Authorities;
 import com.reglamb.projvehimerc.domain.security.Users;
@@ -47,7 +47,7 @@ import com.reglamb.projvehimerc.domain.ubigeo.Provincia;
 import com.reglamb.projvehimerc.domain.vehiculo.Vehiculo_Citv;
 import com.reglamb.projvehimerc.domain.vehiculo.Vehiculo_Soat;
 import com.reglamb.projvehimerc.domain.vehiculo.Vehiculo_Tenencia;
-import com.reglamb.projvehimerc.exception.AuthenticationException;
+//import com.reglamb.projvehimerc.exception.AuthenticationException;
 import com.reglamb.projvehimerc.exception.EntityNotFoundException;
 
 
@@ -72,7 +72,7 @@ public class HabilitacionVehicular_InscripcionFacadeImpl implements Habilitacion
 	DepartamentoDao departamentoDao;
 	DistritoDao distritoDao;
 	ProvinciaDao provinciaDao;
-	UserDao userDao;
+//	UserDao userDao;
 	UsersDao usersDao;
 	AuthoritiesDao authoritiesDao;
 	
@@ -255,9 +255,9 @@ public class HabilitacionVehicular_InscripcionFacadeImpl implements Habilitacion
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<Conductor> getAllConductor(Conductor conductor)
+	public Conductor getConductorByName(String nomConductor)
 			throws DataAccessException {
-		return conductorDao.getAllConductor(conductor);
+		return conductorDao.getConductorByName(nomConductor);
 	}
 	
 	/*Soat*/
@@ -272,20 +272,20 @@ public class HabilitacionVehicular_InscripcionFacadeImpl implements Habilitacion
 	}
 	
 	/*User*/
-
-	@Override
-	public User authenticateUser(String name_user, String pass_user)
-			throws DataAccessException, AuthenticationException {
-		return userDao.authenticateUser(name_user, pass_user);
-	}
-
-	@Override
-	public User getUserByname(String username) throws DataAccessException,
-			EntityNotFoundException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
+//
+//	@Override
+//	public User authenticateUser(String name_user, String pass_user)
+//			throws DataAccessException, AuthenticationException {
+//		return userDao.authenticateUser(name_user, pass_user);
+//	}
+//
+//	@Override
+//	public User getUserByname(String username) throws DataAccessException,
+//			EntityNotFoundException {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//	
 	/*Ubigeo*/
 	@Override
 	public void saveUbigeo(Ubigeo_Transportista ubigeo) throws DataAccessException {
