@@ -46,6 +46,7 @@ public String getJsp(ModelMap model) {
 
 	model.addAttribute("message", "Spring 3 MVC Hello World");
 //	return "flowsjsp/welcome/welcome";
-	return "views/flowjsp/ajax";
+//	return "views/flowjsp/ajax";
+	return "flowsjsp/welcome/welcome";
 }
 }
