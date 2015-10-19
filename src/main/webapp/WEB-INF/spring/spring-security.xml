@@ -16,7 +16,7 @@
 		
 		
 		<form-login login-page="/spring/index" login-processing-url="/spring/loginProcess" 
-		default-target-url="/spring/views" authentication-failure-url="/spring/index?login_error=1"/>
+		default-target-url="/spring/views/" authentication-failure-url="/spring/index?login_error=1"/>
 		<!--  default-target-url="/spring/main" authentication-failure-url="/spring/index?login_error=1"/> -->
 		<logout logout-url="/spring/logout" logout-success-url="/spring/logoutSuccess" />
 	</http>

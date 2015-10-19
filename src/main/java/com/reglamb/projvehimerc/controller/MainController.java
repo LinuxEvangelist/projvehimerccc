@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MainController {
 	@Autowired
 	protected UserDetailsService userService;
-	@RequestMapping(value = { "/views**" },method = RequestMethod.GET)
+	@RequestMapping(value = { "/views" },method = RequestMethod.GET)
 	public String getJsp(ModelMap model) {
 
 		model.addAttribute("message", "Spring 3 MVC Hello World");
-		return "views/flowjsp/index";
+		return "views/index";
 	}
 }
