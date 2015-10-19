@@ -137,7 +137,11 @@
 		<!-- <url-pattern>/spring/*</url-pattern> -->
 		<url-pattern>/spring/*</url-pattern>
 	</servlet-mapping>
-
+	
+	<mime-mapping>
+    <extension>jsp <!--{or the extension of file}--></extension>
+    <mime-type>text/html</mime-type>
+  	</mime-mapping>
 	<!-- Page That control SpringWeb <error-page> <error-code>404</error-code> 
 		<location>/WEB-INF/jsp/error.jsp</location> </error-page> -->
 	<!-- <welcome-file-list>
