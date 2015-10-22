@@ -5,7 +5,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!DOCTYPE html>
 <html>
 <head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -87,7 +86,7 @@ You have logged out of the application
 				<div class="center">
 					
 
-					<a href="#" class="btn btn-primary">
+					<a href="index" class="btn btn-primary">
 						<i class="ace-icon fa fa-tachometer"></i>
 Login Again					</a>
 				</div>
